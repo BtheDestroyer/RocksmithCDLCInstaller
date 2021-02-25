@@ -3,7 +3,11 @@
 #include <iostream>
 
 constexpr const char* k_ext = ".psarc";
+#ifdef _WIN64
 constexpr const char* k_installLocation = "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Rocksmith2014\\dlc\\cdlc\\";
+#else
+constexpr const char* k_installLocation = "C:\\Program Files\\Steam\\steamapps\\common\\Rocksmith2014\\dlc\\cdlc\\";
+#endif
 
 void pause()
 {
